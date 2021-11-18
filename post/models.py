@@ -20,7 +20,7 @@ class Post(models.Model):
     other_field6= models.CharField(max_length=20) 
     other_field7= models.CharField(max_length=20) 
 
-    def todb(self):
+    def publish(self):
         self.published_date = timezone.now()
         self.save()
 
