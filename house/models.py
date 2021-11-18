@@ -10,7 +10,7 @@ class House(models.Model):
     district = models.CharField(max_length=20)
     ward = models.CharField(max_length=20)
     vilage = models.CharField(max_length=20)
-    strict = models.CharField(max_length=20)
+    strit = models.CharField(max_length=20)
 
     def saveme(self):
         self.save()

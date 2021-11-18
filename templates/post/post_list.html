@@ -1,7 +1,28 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <p>Hi there!</p>
-    <p>It works!</p>
+    <h1>Students</h1>
+    {% for student in student %}
+    <article>
+    <p>{{ student.firstname }} {{ student.middlename }} {{ student.lastname }}</p>
+    </article>
+    {% endfor %}
+    <h1>Posts</h1>
+<div><hr/></div>
+    {% for post in post %}
+    <article>
+        <time>published: {{ post.published_date }}</time>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </article>
+    {% endfor %}
+
+    
+    <h1>Houses</h1>
+    <div><hr/></div>
+    {% for house in house %}
+    <p>{{ house.region }} {{ house.district }} {{ house.ward }}</p>
+    {% endfor %}
+
 </body>
 </html>
